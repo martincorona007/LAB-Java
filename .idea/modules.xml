@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Java-LAB.iml" filepath="$PROJECT_DIR$/Java-LAB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eclipse/eclipse.iml" filepath="$PROJECT_DIR$/eclipse/eclipse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netbeans/netbeans.iml" filepath="$PROJECT_DIR$/netbeans/netbeans.iml" />
+      <module fileurl="file://$PROJECT_DIR$/herenciaEjercicios/programa_1/programa_1.iml" filepath="$PROJECT_DIR$/herenciaEjercicios/programa_1/programa_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/herenciaEjercicios/programa_2/programa_2.iml" filepath="$PROJECT_DIR$/herenciaEjercicios/programa_2/programa_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/herenciaEjercicios/programa_3/programa_3.iml" filepath="$PROJECT_DIR$/herenciaEjercicios/programa_3/programa_3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/herenciaEjercicios/programa_4/programa_4.iml" filepath="$PROJECT_DIR$/herenciaEjercicios/programa_4/programa_4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/herenciaEjercicios/programa_5/programa_5.iml" filepath="$PROJECT_DIR$/herenciaEjercicios/programa_5/programa_5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/herenciaEjercicios/programa_6/programa_6.iml" filepath="$PROJECT_DIR$/herenciaEjercicios/programa_6/programa_6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/herenciaEjercicios/programa_7/programa_7.iml" filepath="$PROJECT_DIR$/herenciaEjercicios/programa_7/programa_7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/herenciaEjercicios/programa_8/programa_8.iml" filepath="$PROJECT_DIR$/herenciaEjercicios/programa_8/programa_8.iml" />
+    </modules>
+  </component>
+</project>
