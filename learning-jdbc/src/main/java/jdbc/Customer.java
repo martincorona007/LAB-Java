@@ -1,6 +1,8 @@
-package jdbc.util;
+package jdbc;
 
-public class Customer  implements DataTransferObject{
+import jdbc.util.DataTransferObject;
+
+public class Customer  implements DataTransferObject {
     private long id;
     private String firstName;
     private String lastName;

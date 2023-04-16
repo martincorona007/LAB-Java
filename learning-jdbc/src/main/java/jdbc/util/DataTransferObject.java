@@ -1,2 +1,5 @@
-package jdbc.util;public interface DataTransferObject {
+package jdbc.util;
+
+public interface DataTransferObject {
+    long getId();
 }
