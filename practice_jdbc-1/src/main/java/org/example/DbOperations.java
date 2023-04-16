@@ -75,10 +75,25 @@ public class DbOperations {
     }
 
     public ArrayList getStudentId(int id) throws  SQLException{
-        return null;
+        String sql_query = "SELECT * FROM Student WHERE id = ?";
+        ArrayList list = new ArrayList();
+        preparedStatement = con.prepareStatement(sql_query);
+        preparedStatement.setInt(1,id);
+        ResultSet resultSet1 = preparedStatement.executeQuery();
+        while (resultSet1.next()){
+            list.add(resultSet1.getInt(1));
+            list.add(resultSet1.getString(2));
+            list.add(resultSet1.getFloat(3));
+            list.add(resultSet1.getInt(1));
+        }
+        return list;
     }
     public ResultSet getAllStundets() throws SQLException{
-        return  null;
+        String sql_query = "SELECT * FROM Student";
+        preparedStatement = con.prepareStatement(sql_query);
+        ResultSet resultSet1 = preparedStatement.executeQuery();
+
+        return  resultSet1;
     }
 
 }

@@ -8,14 +8,20 @@ public class Main {
     public static void main(String[] args) throws SQLException {
 
         DbOperations operations = new DbOperations();
+        operations.getStudentId(4).forEach(e-> System.out.print(e+" "));
 
-        ArrayList list = new ArrayList<>();
+//        ResultSet resultSet = operations.getAllStundets();
+//        while (resultSet.next()){
+//            System.out.println(resultSet.getInt(1)+" "+resultSet.getString(2)+" "+resultSet.getFloat(3)+" "+resultSet.getInt(4));
+//        }
 
-        operations.getSubjectById(2).forEach(e -> System.out.print(e+" "));
+
+        //operations.getSubjectById(2).forEach(e -> System.out.print(e+" "));
 
 
-        //System.out.println(operations.insertSubject("Diferential Equations"));
-        //System.out.println(operations.insertStudent("Ramon",5,"Math"));
+        //System.out.println(operations.insertSubject("Nurse"));
+
+       // System.out.println(operations.insertStudent("Rash",5,"Science"));
 
         //System.out.println(operations.insertStudent("Brank"));
 
