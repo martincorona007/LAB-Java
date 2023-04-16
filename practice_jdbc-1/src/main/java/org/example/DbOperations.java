@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class DbOperations {
     Connection con;
@@ -27,7 +28,18 @@ public class DbOperations {
         }
     }
     public ArrayList getSubjectById(int id) throws SQLException{
-        return null;
+
+        ArrayList lista =new ArrayList();
+        String sql_query = "SELECT * FROM Subject WHERE id = ?";
+        preparedStatement = con.prepareStatement(sql_query);
+        preparedStatement.setInt(1,id);
+        ResultSet resultSet1 = preparedStatement.executeQuery();
+        while (resultSet1.next()){
+            lista.add(resultSet1.getInt(1));
+            lista.add(resultSet1.getString(2));
+        }
+
+        return lista;
     }
     public ResultSet getAllSubjects() throws SQLException{
         String sql_query = "SELECT * FROM Subject";
