@@ -9,7 +9,12 @@ public class Main {
         DbOperations operations = new DbOperations();
 
         //System.out.println(operations.insertSubject("Phone"));
-        System.out.println(operations.getAllSubjects());
+
+        ResultSet resultSet = operations.getAllSubjects();
+        while (resultSet.next()){
+            String name = resultSet.getString("name");
+            System.out.println("=> "+name);
+        }
 
     }
 }

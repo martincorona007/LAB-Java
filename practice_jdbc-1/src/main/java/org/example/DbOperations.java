@@ -30,7 +30,9 @@ public class DbOperations {
         return null;
     }
     public ResultSet getAllSubjects() throws SQLException{
-        return null;
+        String sql_query = "SELECT * FROM Subject";
+        preparedStatement = con.prepareStatement(sql_query);
+        return resultSet = preparedStatement.executeQuery();
     }
     public boolean insertStudent(String student_name, float score, String name) throws SQLException{
 
