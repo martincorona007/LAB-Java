@@ -8,8 +8,6 @@ import java.util.ArrayList;
 
 public class DbOperations {
     Connection con;
-    PreparedStatement pstm = null;
-    ResultSet res = null;
     public DbOperations(){
         con = DbUtil.getConnection();
     }
