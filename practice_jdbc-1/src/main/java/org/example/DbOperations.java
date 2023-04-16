@@ -8,12 +8,23 @@ import java.util.ArrayList;
 
 public class DbOperations {
     Connection con;
+    PreparedStatement preparedStatement = null;
+    ResultSet resultSet = null;
     public DbOperations(){
         con = DbUtil.getConnection();
     }
-
+    //CREATE
     public boolean insertSubject(String name) throws SQLException{
-    return false;
+        String sql_query = "INSERT INTO Subject(name)";
+        sql_query+="VALUES(?)";
+        preparedStatement = con.prepareStatement(sql_query);
+        preparedStatement.setString(1,name);
+        int result = preparedStatement.executeUpdate();
+        if(result == 1){
+            return true;
+        }else{
+            return false;
+        }
     }
     public ArrayList getSubjectById(int id) throws SQLException{
         return null;
