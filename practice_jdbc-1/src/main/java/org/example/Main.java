@@ -5,31 +5,41 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args){
 
-        DbOperations operations = new DbOperations();
-        operations.getStudentId(4).forEach(e-> System.out.print(e+" "));
 
-//        ResultSet resultSet = operations.getAllStundets();
-//        while (resultSet.next()){
-//            System.out.println(resultSet.getInt(1)+" "+resultSet.getString(2)+" "+resultSet.getFloat(3)+" "+resultSet.getInt(4));
+          DbOperations operations = new DbOperations();
+          try {
+                ResultSet resultSet = operations.getAllStundets();
+                while (resultSet.next()){
+                    System.out.println(resultSet.getInt("id")+" "+resultSet.getString("student_name")+" "+resultSet.getFloat("score")+" "+resultSet.getString("subject_id"));
+                }
+//                operations.getStudentId(6).forEach( s -> System.out.print(s+" "));
+
+//              System.out.println(operations.insertStudent("Martin",49,"Subject 10"));
+
+//              ResultSet resultSet = operations.getAllSubjects();
+//              while (resultSet.next()){
+//                  System.out.println(resultSet.getInt("id") +" "+ resultSet.getString("name"));
+//
+//              }
+
+//              operations.getSubjectById(5).forEach(e -> System.out.print(e+" "));
+
+//              for(int i = 0; i < 16; i++){
+//
+//                  System.out.println(operations.insertSubject("Subject "+i));
+//              }
+          }catch (Exception e){
+              System.out.println("Exeption :D "+e);
+          }
+
+
+//        RunningScripts op = new RunningScripts();
+//        try {
+//            op.runDbScript();
+//        } catch (Exception e) {
+//            throw new RuntimeException(e);
 //        }
-
-
-        //operations.getSubjectById(2).forEach(e -> System.out.print(e+" "));
-
-
-        //System.out.println(operations.insertSubject("Nurse"));
-
-       // System.out.println(operations.insertStudent("Rash",5,"Science"));
-
-        //System.out.println(operations.insertStudent("Brank"));
-
-//        ResultSet resultSet = operations.getAllSubjects();
-//        while (resultSet.next()){
-//            String name = resultSet.getString("name");
-//            System.out.println("=> "+name);
-//        }
-
     }
 }

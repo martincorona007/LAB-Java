@@ -5,95 +5,87 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class DbOperations {
     Connection con;
-    PreparedStatement preparedStatement = null;
-    ResultSet resultSet = null;
+    ResultSet resultSet;
+    PreparedStatement preparedStatement;
     public DbOperations(){
         con = DbUtil.getConnection();
     }
-    //CREATE
+
     public boolean insertSubject(String name) throws SQLException{
-        String sql_query = "INSERT INTO Subject(name)";
-        sql_query+="VALUES(?)";
-        preparedStatement = con.prepareStatement(sql_query);
+        String query_sql = "INSERT INTO Subject(name) VALUES(?)";
+        preparedStatement = con.prepareStatement(query_sql);
         preparedStatement.setString(1,name);
-        int result = preparedStatement.executeUpdate();
-        if(result == 1){
-            return true;
+        int result  = preparedStatement.executeUpdate();
+        if(result!=1){
+            return  false;
         }else{
-            return false;
+            return true;
         }
     }
     public ArrayList getSubjectById(int id) throws SQLException{
-
-        ArrayList lista =new ArrayList();
-        String sql_query = "SELECT * FROM Subject WHERE id = ?";
-        preparedStatement = con.prepareStatement(sql_query);
+        String query_sql = "SELECT * FROM Subject WHERE id = ?";
+        ArrayList lista = new ArrayList();
+        preparedStatement = con.prepareStatement(query_sql);
         preparedStatement.setInt(1,id);
-        ResultSet resultSet1 = preparedStatement.executeQuery();
-        while (resultSet1.next()){
-            lista.add(resultSet1.getInt(1));
-            lista.add(resultSet1.getString(2));
+        resultSet = preparedStatement.executeQuery();
+        while(resultSet.next()){
+            lista.add(resultSet.getInt("id"));
+            lista.add(resultSet.getString("name"));
         }
-
         return lista;
     }
     public ResultSet getAllSubjects() throws SQLException{
-        String sql_query = "SELECT * FROM Subject";
-        preparedStatement = con.prepareStatement(sql_query);
-        return resultSet = preparedStatement.executeQuery();
-    }
-
-    public boolean insertStudent(String student_name, float score, String name) throws SQLException{
-        String sql_query = "INSERT INTO Student(student_name,score,subject_id)";
-        sql_query += "VALUES (?,?,?)";
-        String sql_query2 = "SELECT * FROM Subject WHERE name = ?";
-        int i = 0;
-        preparedStatement = con.prepareStatement(sql_query2);
-        preparedStatement.setString(1,name);
+        String query_sql = "SELECT * FROM Subject";
+        preparedStatement = con.prepareStatement(query_sql);
         resultSet = preparedStatement.executeQuery();
-
-        while (resultSet.next()){
-            i = resultSet.getInt("id");
+        return resultSet;
+    }
+    public boolean insertStudent(String student_name, float score, String name) throws SQLException{
+        String query_sql = "SELECT * FROM Subject WHERE name = ?";
+        int id_student = 0;
+        preparedStatement = con.prepareStatement(query_sql);
+        preparedStatement.setString(1,name);
+        ResultSet resultSet1 = preparedStatement.executeQuery();
+        System.out.println("p2 "+preparedStatement);
+        while(resultSet1.next()){
+            id_student = resultSet1.getInt("id");
         }
-        preparedStatement = con.prepareStatement(sql_query);
+
+        String query_sql2 = "INSERT INTO Student(student_name,score,subject_id) VALUES(?,?,?)";
+        preparedStatement = con.prepareStatement(query_sql2);
         preparedStatement.setString(1,student_name);
         preparedStatement.setFloat(2,score);
-        System.out.println("pre "+preparedStatement);
-        preparedStatement.setInt(3,i);
-        System.out.println("pre "+preparedStatement);
+        preparedStatement.setInt(3,id_student);
+        System.out.println("p1 "+preparedStatement);
         int result = preparedStatement.executeUpdate();
-
         if(result != 1){
             return false;
         }else{
             return true;
         }
-    }
 
+    }
     public ArrayList getStudentId(int id) throws  SQLException{
-        String sql_query = "SELECT * FROM Student WHERE id = ?";
-        ArrayList list = new ArrayList();
-        preparedStatement = con.prepareStatement(sql_query);
+        String query_sql = "SELECT * FROM Student WHERE id = ?";
+        ArrayList lista = new ArrayList<>();
+        preparedStatement = con.prepareStatement(query_sql);
         preparedStatement.setInt(1,id);
-        ResultSet resultSet1 = preparedStatement.executeQuery();
-        while (resultSet1.next()){
-            list.add(resultSet1.getInt(1));
-            list.add(resultSet1.getString(2));
-            list.add(resultSet1.getFloat(3));
-            list.add(resultSet1.getInt(1));
+        resultSet = preparedStatement.executeQuery();
+        while(resultSet.next()){
+            lista.add(resultSet.getInt("id"));
+            lista.add(resultSet.getString("student_name"));
+            lista.add(resultSet.getFloat("score"));
+            lista.add(resultSet.getInt("id"));
         }
-        return list;
+        return lista;
     }
     public ResultSet getAllStundets() throws SQLException{
-        String sql_query = "SELECT * FROM Student";
-        preparedStatement = con.prepareStatement(sql_query);
-        ResultSet resultSet1 = preparedStatement.executeQuery();
+        String query_sql = "SELECT * FROM Student";
+        preparedStatement = con.prepareStatement(query_sql);
+        return  preparedStatement.executeQuery();
 
-        return  resultSet1;
     }
-
 }

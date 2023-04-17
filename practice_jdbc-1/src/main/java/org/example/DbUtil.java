@@ -22,10 +22,6 @@ public class DbUtil {
         return con;
     }
     public static void closeConnection(Connection con){
-        try {
-            con.close();
-        }catch (Exception e){
-            System.out.println(e);
-        }
+
     }
 }
