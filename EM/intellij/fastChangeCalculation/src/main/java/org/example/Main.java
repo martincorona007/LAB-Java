@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        LocalDa
         Scanner scanner = new Scanner(System.in);
         int min = 50; // Minimum value of range
         int max = 100; // Maximum value of range
@@ -29,6 +30,8 @@ public class Main {
             System.out.print((i+1)+" Price "+prices[i]+" Pay "+pay[i]);
             System.out.println();
         }
+        System.out.println(Integer.MAX_VALUE);
+        System.out.println(Integer.MIN_VALUE);
 
 //        Sub
 //        Price $150 Pay $200 Change ?
