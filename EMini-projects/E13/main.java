@@ -5,7 +5,7 @@ public class Main{
         //                                  1          2          3         4         5          6         7
         String[] daysWeek = new String[]{"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
         //                                  0          1          2          3         4         5         6
-        int startDayWeek = 2; 
+        int startDayWeek = 5; 
         boolean flag_a = false;
         int iterator = 4;
          try {
@@ -16,14 +16,14 @@ public class Main{
                     startDayWeek++;
                 }*/
                 if(startDayWeek!=7){
-                    writer.write(" "+daysWeek[startDayWeek]+" 12/"+index+"/2021 ");
+                    writer.write(" "+daysWeek[startDayWeek]+" 06/"+index+"/2024 ");
                     //writer.write(" "+daysWeek[startDayWeek]+" 10/["+index+"]/2021 ["+startDayWeek+"] A");
                     writer.write("\r\n");
                     writer.write("\r\n");
                     startDayWeek++;
                 }else{
                     startDayWeek = 0;
-                    writer.write(" "+daysWeek[startDayWeek]+" 11/"+index+"/2021 ");
+                    writer.write(" "+daysWeek[startDayWeek]+" 06/"+index+"/2024 ");
                     //writer.write(" "+daysWeek[startDayWeek]+" 10/["+index+"]/2021 ["+startDayWeek+"] B");
                     writer.write("\r\n");
                     writer.write("\r\n");
