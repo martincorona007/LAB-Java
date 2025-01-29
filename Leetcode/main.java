@@ -1,6 +1,8 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Scanner;
 
 public class main {
     public void reverseString0(char[] s) {
@@ -80,21 +82,30 @@ public class main {
 //        System.out.println(reverseString2(reverseWord));
 
         String palindrome1 = "madam";
+        /*
+        m a d a m
+        0 1 2 3 4
+         */
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("length "+palindrome1.length());
         String palindrome2 = "A man a plan a canal Panama";
         System.out.println(obj.isPalindromee(palindrome1));
 
 
         HashSet<Integer> hashSet = new HashSet<>();
         HashMap<Integer,Character> hashMap = new HashMap<>();
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 5; i++) {
             hashMap.put(i, palindrome1.charAt(i));
             System.out.println("=> "+hashMap.get(i));
         }
+
         ArrayList<Character> al1 = new ArrayList<>();
         al1.add('a');
         ArrayList<Integer> al = new ArrayList<>();
         al.add(1);
 
+       // java.util.stream.IntStream.
 
 
     }
