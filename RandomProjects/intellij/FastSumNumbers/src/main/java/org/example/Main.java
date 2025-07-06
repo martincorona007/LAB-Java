@@ -27,7 +27,7 @@ public class Main {
         int max = 100; // Maximum value of range
         Map<Integer,OperationSum> testingSet = new HashMap<>();
         int sumi = 0;
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 2; i++) {
 
             int randomNumber = (int)Math.floor(Math.random() * (max - min + 1) + min);
             sumi+=randomNumber;

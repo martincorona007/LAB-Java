@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="874cae1e-e1fa-4b9c-b215-25bc16b3ce9e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Inheritance/herenciaEjercicios/programa_1/out/production/project_1/C.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Inheritance/herenciaEjercicios/programa_1/out/production/project_1/C.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Inheritance/herenciaEjercicios/programa_1/out/production/project_1/D.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Inheritance/herenciaEjercicios/programa_1/out/production/project_1/D.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Inheritance/herenciaEjercicios/programa_1/out/production/project_1/InvocacionMetodos.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Inheritance/herenciaEjercicios/programa_1/out/production/project_1/InvocacionMetodos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RandomProjects/intellij/FastSumNumbers/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RandomProjects/intellij/FastSumNumbers/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RandomProjects/intellij/FastSumNumbers/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RandomProjects/intellij/FastSumNumbers/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RandomProjects/intellij/FastSumNumbers/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RandomProjects/intellij/FastSumNumbers/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../RandomProjects/intellij/FastSumNumbers/target/classes/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RandomProjects/intellij/fastChangeCalculation/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RandomProjects/intellij/fastChangeCalculation/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RandomProjects/intellij/testing/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RandomProjects/intellij/testing/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +33,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/LAB/LAB-Java/Leetcode",
+    "last_opened_file_path": "C:/LAB/LAB-Java/NewProject",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -62,5 +64,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
