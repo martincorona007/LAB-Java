@@ -13,7 +13,8 @@ public class Main {
             System.out.println(array2[i]);
         }
         int[][] array4 = new int[2][2];
-        array4[0][0] = 1;
+        a
+    rray4[0][0] = 1;
         array4[0][1] = 2;
         array4[1][0] = 3;
         array4[1][1] = 4;
@@ -33,4 +34,6 @@ public class Main {
         }
 
     }
-}
+}'
+        '
+ a a
