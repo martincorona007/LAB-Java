@@ -7,7 +7,9 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
        
-
+//JAVA 11+
+        Java11Collections obj = new Java11Collections(4);
+        obj.immutableListExample();
 
 
 //        ArrayList<Integer> dynamicList = new ArrayList<>(5);
