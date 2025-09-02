@@ -1,10 +1,11 @@
+package org.example;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class main {
+public class problems {
     public void reverseString0(char[] s) {
         System.out.println(s);
 //            for (int i = s.length-1; i >= 0; i--) {
@@ -71,7 +72,7 @@ public class main {
         return false;
     }
     public static void main(String[] args) {
-        main obj = new main();
+        problems obj = new problems();
 //        char[] myChain = new char[] {'h','e','l','l','o'};
 
 //        obj.reverseString(myChain);
@@ -105,7 +106,7 @@ public class main {
         ArrayList<Integer> al = new ArrayList<>();
         al.add(1);
 
-       // java.util.stream.IntStream.
+        // java.util.stream.IntStream.
 
 
     }
