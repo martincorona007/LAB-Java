@@ -1,6 +1,34 @@
 package org.example.Random;
 
 public class RandomIdeas {
+
+    public void idea3(){
+        try{
+            int arr1[] = {0, 1, 2, 3, 4};//odd
+            int arr2[] = {0, 1, 2, 3};//even
+
+            int newArrayLength1 = (arr1.length+1) / 2;
+            int newArrayLength2 = (arr2.length+1) / 2;
+
+            System.out.println(" "+newArrayLength1+" "+newArrayLength2);
+
+        }catch (Exception e){
+            System.out.println(e);
+        }
+
+    }
+    public void idea2(){
+        Object[] newObject = new Object[4];
+        newObject[0] = 1;
+        newObject[1] = 2.2;
+        newObject[2] = "1";
+        newObject[3] = true;
+        for(int i = 0; i < newObject.length; i++){
+            System.out.println(newObject[i]);
+        }
+
+
+    }
     //pre post incrcement
     public void idea1(){
         int dec = 152;
